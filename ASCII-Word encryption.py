@@ -1,10 +1,17 @@
 message = input("enter a letter: ")
 
+# Encrypt and store
+encrypted = ""
 for letter in message:
     newcharacter = chr(ord(letter)+8)
-    print (newcharacter, end="")
+    encrypted += newcharacter
+    print(newcharacter, end="")
 
+print()  # Blank line to separate
 
-for letter in message:
+# Decrypt the encrypted message
+for letter in encrypted:
     newcharacter = chr(ord(letter)-8)
-    print (newcharacter, end="")
+    print(newcharacter, end="")
+
+print()
